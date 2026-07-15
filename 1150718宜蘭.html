@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宜蘭二日釣魚溫泉之旅 - 完整企劃書</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2b6cb0;
+            --secondary: #319795;
+            --accent: #dd6b20;
+            --neutral-dark: #2d3748;
+            --neutral-light: #f7fafc;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: "PingFang TC", "Helvetica Neue", "Microsoft JhengHei", sans-serif;
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            background-color: #edf2f7;
+            margin: 0;
+            padding: 20px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .page {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            page-break-after: always;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px double var(--primary);
+            padding-bottom: 25px;
+            margin-bottom: 35px;
+        }
+        .header h1 {
+            color: var(--primary);
+            margin: 0;
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .header p {
+            color: #718096;
+            margin: 8px 0 0 0;
+            font-size: 15px;
+        }
+        .nav-btn-box {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .nav-btn {
+            background-color: var(--primary-light);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(50, 137, 200, 0.2);
+            transition: all 0.2s;
+        }
+        .nav-btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .day-badge {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .timeline {
+            position: relative;
+            margin-left: 20px;
+            border-left: 3px solid var(--border-color);
+            padding-left: 25px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36.5px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            border: 4px solid white;
+            box-shadow: 0 0 8px rgba(0,0,0,0.15);
+        }
+        .time-header {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-light);
+            margin-bottom: 6px;
+        }
+        .card {
+            background: var(--neutral-light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a202c;
+            margin: 0 0 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #4a5568;
+            margin: 0 0 10px 0;
+        }
+        .card-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #718096;
+            margin-bottom: 8px;
+            border-top: 1px dashed var(--border-color);
+            padding-top: 8px;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .info-tag {
+            background: #feebc8;
+            color: #c05621;
+            padding: 3px 10px;
+            font-size: 12px;
+            border-radius: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .map-link {
+            font-size: 13px;
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .map-link:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: var(--neutral-light);
+        }
+        .alert-section {
+            background-color: #fffaf0;
+            border-left: 5px solid var(--accent);
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+        .alert-section h3 {
+            margin: 0 0 10px 0;
+            color: var(--accent);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .alert-list {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+        .alert-list li {
+            margin-bottom: 8px;
+        }
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+                padding: 0;
+                margin-bottom: 0;
+            }
+            .nav-btn-box {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- 第一頁：詳細行程與動態路線 (Day 1) -->
+        <div class="page">
+            <div class="header">
+                <h1>宜蘭二日釣魚溫泉之旅</h1>
+                <p>時間：7/18 (六) - 7/19 (日) | 出發地：台中大甲 | 住宿：礁溪山形閣</p>
+            </div>
+
+            <!-- 一鍵導航捷徑 -->
+            <div class="nav-btn-box">
+                <a href="https://www.google.com/maps/dir/Dajia+District,+Taichung+City,+Taiwan/Ta-hsi+Fishing+Harbor/%E5%A4%A7%E5%A1%AD%E8%A7%80%E5%85%89%E4%BC%91%E9%96%92%E9%A4%8A%E6%AE%96%E5%8D%80%2F%E8%BC%95%E8%A6%AA%E9%AD%9A%E6%9C%B6/%E5%B1%B1%E5%BD%A2%E9%96%A3+Yamagata+Kaku+Hotel+%26+Spa/data=!4m26!4m25!1m5!1m1!19sChIJ6RfUTlwOaTQRBndwnBHxS6E!2m2!1d120.64875079999999!2d24.3788233!1m5!1m1!19sChIJgyCIVtNYXTQRTLNKA8BGMrM!2m2!1d121.9013889!2d24.9411111!1m5!1m1!19sChIJ0w6pSmz6ZzQRFs2grL9Yfb0!2m2!1d121.7954441!2d24.819351299999997!1m5!1m1!19sChIJI9gB4Df6ZzQRDVq7oYSH6x8!2m2!1d121.775055!2d24.828246!3e0" class="nav-btn" target="_blank">🗺️ Day 1 專屬一鍵多點導航</a>
+                <a href="https://www.google.com/maps/dir/%E5%B1%B1%E5%BD%A2%E9%96%A3+Yamagata+Kaku+Hotel+%26+Spa/%E9%9%90%E5%93%A5%E4%BC%91%E9%96%92%E9%87%A3%E9%AD%9A%E5%A0%B4/%E8%B1%AA%E9%81%8B%E8%9D%A6%E3%81%AE%E6%98%9F%E7%90%83/Dajia+District,+Taichung+City,+Taiwan/data=!4m26!4m25!1m5!1m1!19sChIJI9gB4Df6ZzQRDVq7oYSH6x8!2m2!1d121.775055!2d24.828246!1m5!1m1!19sChIJky4-t3bjZzQR3hrvoiYBy3I!2m2!1d121.63940389999999!2d24.7136061!1m5!1m1!19sChIJm6TD8-37ZzQRuXPm61QKMYA!2m2!1d121.7778552!2d24.8175927!1m5!1m1!19sChIJ6RfUTlwOaTQRBndwnBHxS6E!2m2!1d120.64875079999999!2d24.3788233!3e0" class="nav-btn" target="_blank">🗺️ Day 2 專屬一鍵多點導航</a>
+            </div>
+
+            <div class="day-badge">Day 1：7/18 (六) 出發 ➔ 海野釣 ➔ 精緻休閒</div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time-header">07:30 - 10:15 | 啟程出發</div>
+                    <div class="card">
+                        <div class="card-title">🚗 大甲出發 ➔ 宜蘭大溪漁港</div>
+                        <p class="card-desc">自大甲上國道 3 號，轉接國道 5 號由頭城交流道下，接台 2 線濱海公路北上抵達大溪漁港。</p>
+                        <div class="card-meta">
+                            <div class="meta-item">⏱️ 車程：約 2 小時 29 分鐘</div>
+                            <div class="meta-item">🛣️ 里程：約 195 公里</div>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/Dajia+District,+Taichung+City,+Taiwan/Ta-hsi+Fishing+Harbor/data=!4m14!4m13!1m5!1m1!19sChIJ6RfUTlwOaTQRBndwnBHxS6E!2m2!1d120.64875079999999!2d24.3788233!1m5!1m1!19sChIJgyCIVtNYXTQRTLNKA8BGMrM!2m2!1d121.9013889!2d24.9411111!3e0" class="map-link" target="_blank">🔗 點我查看單段導航 ➔</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-header">10:15 - 13:30 | 海濱野釣</div>
+                    <div class="card">
+                        <div class="card-title">🎣 大溪漁港 堤防路亞 / 野釣體驗</div>
+                        <p class="card-desc">於外圍堤防安全與合法釣魚區作釣，觀賞現撈漁船陸續入港，享受海釣樂趣。</p>
+                        <span class="info-tag">裝備提醒：7 月酷暑，請務必戴太陽眼鏡、遮陽帽、備好充足水分</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-header">13:30 - 14:30 | 漁港海鮮饗宴</div>
+                    <div class="card">
+                        <div class="card-title">🦞 大溪漁港 13:30 準時用餐</div>
+                        <p class="card-desc">於大溪漁港新港區的海鮮直銷市集品嚐現撈海產、代客料理。推薦：紅喉魚、生蠔及各式現煮海鮮海味。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-header">14:30 - 15:00 | 下午位移</div>
+                    <div class="card">
+                        <div class="card-title">🚗 大溪漁港 ➔ 輕親魚朶</div>
+                        <p class="card-desc">由台 2 線往南朝礁溪時潮村前進。</p>
+                        <div class="card-meta">
+                            <div class="meta-item">⏱️ 車程：約 29 分鐘</div>
+                            <div class="meta-item">🛣️ 里程：約 18.8 公里</div>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/Ta-hsi+Fishing+Harbor/%E5%8F%B0%E7%81%A3%E5%AE%9C%E8%98%AD%E7%B8%A3%E7%A4%81%E6%BA%AA%E9%84%89%E6%99%82%E6%BD%AE%E6%9D%91%E7%8E%89%E9%BE%8D%E8%B7%AF%E4%BA%8C%E6%AE%B5495%E8%99%9F,+%E5%A4%A7%E5%A1%AD%E8%A7%80%E5%85%89%E4%BC%91%E9%96%92%E9%A4%8A%E6%AE%96%E5%8D%80%2F%E8%BC%95%E8%A6%AA%E9%AD%9A%E6%9C%B6/data=!4m14!4m13!1m5!1m1!19sChIJgyCIVtNYXTQRTLNKA8BGMrM!2m2!1d121.9013889!2d24.9411111!1m5!1m1!19sChIJ0w6pSmz6ZzQRFs2grL9Yfb0!2m2!1d121.7954441!2d24.819351299999997!3e0" class="map-link" target="_blank">🔗 點我查看單段導航 ➔</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-header">15:00 - 17:30 | 休閒魚塭體驗</div>
+                    <div class="card">
+                        <div class="card-title">🌾 大塭觀光休閒養殖區 / 輕親魚朶</div>
+                        <p class="card-desc">漫步充滿峇里島風情的精緻生態園區。可自費體驗撈蝦、輕巧垂釣或享用精緻烤魚，悠閒放鬆。</p>
+                        <span class="info-tag">雨天備案：若遇到雷陣雨，可改至礁溪附近的觀光工廠室內躲雨</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-header">17:30 - 18:00 | 飯店 Check-in</div>
+                    <div class="card">
+                        <div class="card-title">🏨 輕親魚朶 ➔ 礁溪山形閣飯店</div>
+                        <p class="card-desc">沿宜 4 鄉道驅車開往礁溪火車站旁的山形閣。</p>
+                        <div class="card-meta">
+                            <div class="meta-item">⏱️ 車程：約 8 分鐘</div>
+                            <div class="meta-item">🛣️ 里程：約 3.6 公里</div>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/%E5%8F%B0%E7%81%A3%E5%AE%9C%E8%98%AD%E7%B8%A3%E7%A4%81%E6%BA%AA%E9%84%89%E6%99%82%E6%BD%AE%E6%9D%91%E7%8E%89%E9%BE%8D%E8%B7%AF%E4%BA%8C%E6%AE%B5495%E8%99%9F,+%E5%A4%A7%E5%A1%AD%E8%A7%80%E5%85%89%E4%BC%91%E9%96%92%E9%A4%8A%E6%AE%96%E5%8D%80%2F%E8%BC%95%E8%A6%AA%E9%AD%9A%E6%9C%B6/%E5%B1%B1%E5%BD%A2%E9%96%A3+Yamagata+Kaku+Hotel+%26+Spa,+26242,+No.+187%E8%99%9F%E4%B8%AD%E5%B1%B1%E8%B7%AF%E4%BA%8C%E6%AE%B5%E5%BE%B7%E9%99%BD%E6%9D%91%E7%A4%81%E6%BA%AA%E9%84%89,+%E5%AE%9C%E8%98%AD%E7%B8%A3+Taiwan/data=!4m14!4m13!1m5!1m1!19sChIJ0w6pSmz6ZzQRFs2grL9Yfb0!2m2!1d121.7954441!2d24.819351299999997!1m5!1m1!19sChIJI9gB4Df6ZzQRDVq7oYSH6x8!2m2!1d121.775055!2d24.828246!3e0" class="map-link" target="_blank">🔗 點我查看單段導航 ➔</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二頁：詳細行程、路程總表與實用提醒 (Day 2) -->
+        <div class="page">
+            <div class="day-badge">Day 2：7/19 (日) 專業拉魚 ➔ 釣蝦享樂 ➔ 賦歸</div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time-header">08:20 - 09:00 | 退房出發</div>
+                    <div class="card">
+                        <div class="card-title">🚗 山形閣 退房 ➔ 雞哥休閒釣魚場</div>
+                        <p class="card-desc">於飯店享用頂級早餐後退房，沿 191 縣道往南開往員山鄉山腳下。</p>
+                        <div class="card-meta">
+                            <div class="meta-item">⏱️ 車程：約 40 分鐘</div>
+                            <div class="meta-item">🛣️ 里程：約 28.6 公里</div>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/%E5%B1%B1%E5%BD%A2%E9%96%A3+Yamagata+Kaku+Hotel+%26+Spa,+26242,+No.+187%E8%99%9F%E4%B8%AD%E5%B1%B1%E8%B7%AF%E4%BA%8C%E6%AE%B5%E5%BE%B7%E9%99%BD%E6%9D%91%E7%A4%81%E6%BA%AA%E9%84%89,+%E5%AE%9C%E8%98%AD%E7%B8%A3+Taiwan/%E5%8F%B0%E7%81%A3%E5%AE%9C%E8%98%AD%E7%B8%A3%E5%93%A1%E5%B1%B1%E9%84%89%E4%B8%AD%E8%8F%AF%E6%9D%91%E7%B2%97%E5%9D%91%E8%B7%AF147%E8%99%9F,+%E9%9B%9E%E5%93%A5%E4%BC%91%E9%96%92%E9%87%A3%E9%AD%9A%E5%A0%B4%EF%BC%88%E5%85%AC%E4%BC%91%E6%97%A5%E4%BB%A5FB%E7%82%BA%E4%B8%BB%EF%BC%89/data=!4m14!4m13!1m5!1m1!19sChIJI9gB4Df6ZzQRDVq7oYSH6x8!2m2!1d121.775055!2d24.828246!1m5!1m1!19sChIJky4-t3bjZzQR3hrvoiYBy3I!2m2!1d121.63940389999999!2d24.7136061!3e0" class="map-link" target="_blank">🔗 點我查看單段導航 ➔</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-header">09:00 - 12:00 | 專業釣魚 (9點準時報到)</div>
+                    <div class="card">
+                        <div class="card-title">🎣 雞哥休閒釣魚場 垂釣</div>
+                        <p class="card-desc">09:00 準時報到開單。此處山泉水清澈、群山環繞，池內鱸魚、鯛魚拉力強勁，極具挑戰性。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-header">12:00 - 12:40 | 移動往礁溪</div>
+                    <div class="card">
+                        <div class="card-title">🚗 雞哥釣魚場 ➔ 豪運蝦の星球</div>
+                        <p class="card-desc">收竿後，由員山經台 7 線往北行駛，返抵礁溪市區。</p>
+                        <div class="card-meta">
+                            <div class="meta-item">⏱️ 車程：約 36 分鐘</div>
+                            <div class="meta-item">🛣️ 里程：約 28.1 公里</div>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/%E5%8F%B0%E7%81%A3%E5%AE%9C%E8%98%AD%E7%B8%A3%E5%93%A1%E5%B1%B1%E9%84%89%E4%B8%AD%E8%8F%AF%E6%9D%91%E7%B2%97%E5%9D%91%E8%B7%AF147%E8%99%9F,+%E9%9B%9E%E5%93%A5%E4%BC%91%E9%96%92%E9%87%A3%E9%AD%9A%E5%A0%B4%EF%BC%88%E5%85%AC%E4%BC%91%E6%97%A5%E4%BB%A5FB%E7%82%BA%E4%B8%BB%EF%BC%89/%E5%8F%B0%E7%81%A3%E5%AE%9C%E8%98%AD%E7%B8%A3%E7%A4%81%E6%BA%AA%E9%84%89%E5%BE%B7%E9%99%BD%E6%9D%91%E8%88%88%E8%BE%B2%E8%B7%AF196%E5%B7%B77%E5%BC%848%E8%99%9F%E4%B9%8B1%E8%99%9F,+%E8%B1%AA%E9%81%8B%E8%9D%A6%E3%81%AE%E6%98%9F%E7%90%83/data=!4m14!4m13!1m5!1m1!19sChIJky4-t3bjZzQR3hrvoiYBy3I!2m2!1d121.63940389999999!2d24.7136061!1m5!1m1!19sChIJm6TD8-37ZzQRuXPm61QKMYA!2m2!1d121.77785519999999!2d24.8175927!3e0" class="map-link" target="_blank">🔗 點我查看單段導航 ➔</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-header">12:40 - 15:10 | 歡樂釣蝦與午餐</div>
+                    <div class="card">
+                        <div class="card-title">🦐 豪運蝦の星球 釣泰國蝦 & 鮮蝦饗宴</div>
+                        <p class="card-desc">體驗精緻釣蝦場。現場將泰國蝦戰利品以大鹽火烤，並搭配熱炒餐點做為這兩天完美的午餐尾聲。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="time-header">15:10 - 17:15 | 啟程賦歸</div>
+                    <div class="card">
+                        <div class="card-title">🚗 礁溪 ➔ 台中大甲</div>
+                        <p class="card-desc">15:10 準時由頭城交流道上高速公路。若避開擁堵或滿足高乘載，將能於 2 小時左右安全返回大甲。</p>
+                        <div class="card-meta">
+                            <div class="meta-item">⏱️ 車程：約 2 小時 2 分鐘</div>
+                            <div class="meta-item">🛣️ 里程：約 178 公里</div>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/%E5%8F%B0%E7%81%A3%E5%AE%9C%E8%98%AD%E7%B8%A3%E7%A4%81%E6%BA%AA%E9%84%89%E5%BE%B7%E9%99%BD%E6%9D%91%E8%88%88%E8%BE%B2%E8%B7%AF196%E5%B7%B77%E5%BC%848%E8%99%9F%E4%B9%8B1%E8%99%9F,+%E8%B1%AA%E9%81%8B%E8%9D%A6%E3%81%AE%E6%98%9F%E7%90%83/Dajia+District,+Taichung+City,+Taiwan/data=!4m14!4m13!1m5!1m1!19sChIJm6TD8-37ZzQRuXPm61QKMYA!2m2!1d121.77785519999999!2d24.8175927!1m5!1m1!19sChIJ6RfUTlwOaTQRBndwnBHxS6E!2m2!1d120.64875079999999!2d24.3788233!3e0" class="map-link" target="_blank">🔗 點我查看單段導航 ➔</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 數據大綱表格 -->
+            <h3 style="margin-top: 35px; color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 5px;">📍 路程統計與耗時大綱</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>天數</th>
+                        <th>路程起訖站</th>
+                        <th>行駛主要道路</th>
+                        <th>本段行車耗時</th>
+                        <th>本段距離</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Day 1</td>
+                        <td>大甲 ➔ 大溪漁港</td>
+                        <td>國道3號、國道5號、台2線</td>
+                        <td>2 小時 29 分鐘</td>
+                        <td>195.0 公里</td>
+                    </tr>
+                    <tr>
+                        <td>Day 1</td>
+                        <td>大溪漁港 ➔ 輕親魚朶</td>
+                        <td>台 2 線 (濱海公路)</td>
+                        <td>29 分鐘</td>
+                        <td>18.8 公里</td>
+                    </tr>
+                    <tr>
+                        <td>Day 1</td>
+                        <td>輕親魚朶 ➔ 礁溪山形閣</td>
+                        <td>宜 4 鄉道、礁溪路六段</td>
+                        <td>8 分鐘</td>
+                        <td>3.6 公里</td>
+                    </tr>
+                    <tr>
+                        <td>Day 2</td>
+                        <td>礁溪山形閣 ➔ 雞哥休閒釣魚場</td>
+                        <td>191 縣道、宜 18-2 鄉道</td>
+                        <td>40 分鐘</td>
+                        <td>28.6 公里</td>
+                    </tr>
+                    <tr>
+                        <td>Day 2</td>
+                        <td>雞哥休閒釣魚場 ➔ 豪運蝦の星球</td>
+                        <td>台 7 線、宜蘭市、興農路</td>
+                        <td>36 分鐘</td>
+                        <td>28.1 公里</td>
+                    </tr>
+                    <tr>
+                        <td>Day 2</td>
+                        <td>豪運蝦の星球 ➔ 台中大甲</td>
+                        <td>國道5號、國道3號</td>
+                        <td>2 小時 2 分鐘</td>
+                        <td>178.0 公里</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 實用貼心提醒 -->
+            <div class="alert-section">
+                <h3>💡 旅遊貼心叮嚀與備份提醒</h3>
+                <ul class="alert-list">
+                    <li><strong>國 5 星期日高乘載管制</strong>：週日 15:00 - 20:00 北上交流道實施高乘載。若車上<strong>未滿 3 人</strong>，請務必於 15:00 前上高速公路，或是在礁溪吃完晚餐，待 20:00 後管制結束再行出發。</li>
+                    <li><strong>重度防曬與防雨</strong>：7 月宜蘭天氣極度炎熱，野外釣魚（漁港防波堤）無遮蔽物，務必帶大遮陽帽、抗 UV 傘與備足冰礦泉水以防脫水；午後 14:00 後請留意大雷雨，隨時啟動室內備案。</li>
+                    <li><strong>海鮮保冷與保存</strong>：高溫行車易使海鮮變質，請在車上準備帶有冰磚的<strong>專業保冷冰桶</strong>，以便在漁港或釣場冰存打算攜帶的漁獲或活蝦。</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
