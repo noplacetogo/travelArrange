@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7/16-7/17 借訊與釣魚公差 終極隨身手冊</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #eff6ff;
+            --secondary: #15803d;
+            --secondary-light: #f0fdf4;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --warning: #b45309;
+            --warning-light: #fffbeb;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            color: var(--primary);
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+
+        header p {
+            color: #64748b;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 5px;
+            transition: background 0.2s;
+        }
+
+        .btn-nav.day2 {
+            background-color: var(--secondary);
+        }
+
+        .btn-nav:hover {
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--primary);
+            padding-left: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .section-desc {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        /* 響應式表格 */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            min-width: 600px;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 10px;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        td {
+            border: 1px solid var(--border);
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--light);
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .badge.work { background-color: #ef4444; }
+        .badge.leisure { background-color: #10b981; }
+
+        /* 貼心提醒盒 */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 600px) {
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tip-card {
+            background-color: var(--warning-light);
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .tip-card h4 {
+            margin: 0 0 8px 0;
+            color: var(--warning);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tip-card ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #78350f;
+        }
+
+        .tip-card li {
+            margin-bottom: 5px;
+        }
+
+        /* PDF 列印配置 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            th {
+                background-color: #1e3a8a !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>7/16 - 7/17 借訊暨釣魚公差隨身手冊</h1>
+        <p>（大甲出發・已校正板橋友愛金色商旅交通動線）</p>
+    </header>
+
+    <div style="text-align: center;" class="no-print">
+        <a href="https://www.google.com/maps/dir/%E5%A4%A7%E5%9C%B0/%E5%9F%BA%E9%9A%86%E5%9C%B0%E6%96%B9%E6%B3%95%E9%99%A2/%E5%9F%BA%E9%9A%86%E7%9C%8B%E5%AE%88%E6%89%A0/%E5%85%AB%E6%96%97%E5%AD%90%E6%BC%84%E6%B8%AF/%E7%B4%85%E8%9F%B3%E7%8E%8B%E9%87%A3%E8%9D%A6%E4%BC%91%E9%96%92%E6%9C%83%E9%A4%A8/%E5%8F%B0%E7%81%A3%E6%96%B0%E5%8C%97%E5%B8%82%E6%96%B0%E8%8E%8A%E5%8D%80/" class="btn-nav" target="_blank">🗺️ 開啟 Day 1 導航 (大甲➔基隆➔五股➔板橋)</a>
+        <a href="https://www.google.com/maps/dir/%E5%8F%B0%E7%81%A3%E6%96%B0%E5%8C%97%E5%B8%82%E6%9D%BF%E6%A9%8B%E5%8D%80%E9%87%8D%E6%85%B6%E8%B7%AF66%E8%99%9F/%E8%87%BA%E7%81%A3%E6%96%B0%E5%8C%97%E5%9C%B0%E6%96%B9%E6%B3%95%E9%99%A2/%E6%B3%95%E5%8B%99%E9%83%A8%E7%9F%AF%E6%AD%A3%E7%BD%B2%E8%87%BA%E5%8C%97%E7%9C%8B%E5%AE%88%E6%89%A0/%E5%8F%B0%E7%81%A3%E6%96%B0%E5%8C%97%E5%B8%82%E6%B7%A1%E6%B0%B4%E5%8D%80%E5%B0%8F%E5%9D%A0%E9%A0%8215-2%E8%99%9F/%E5%A4%A7%E9%9B%85%E5%80%91/" class="btn-nav day2" target="_blank">🗺️ 開啟 Day 2 導航 (板橋➔土城院區➔淡水➔大甲)</a>
+    </div>
+
+    <h2>一、 行程與路程數據總覽表</h2>
+    <p class="section-desc">※ 所有行車時間與距離皆已依實測路況及板橋友愛金色商旅校正。</p>
+    
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 25%">起訖站點</th>
+                    <th style="width: 15%">里程/耗時</th>
+                    <th style="width: 15%">行程屬性</th>
+                    <th>交通提示與重點說明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="highlight">大甲出發 ➔ 基隆法院</td>
+                    <td>165 km / 1小時50分</td>
+                    <td><span class="badge work">公務正事</span></td>
+                    <td>走國道3號接汐止系統，06:00出發避開塞車。</td>
+                </tr>
+                <tr>
+                    <td class="highlight">基隆法院 ➔ 基隆看守所</td>
+                    <td>180 m / 1分鐘</td>
+                    <td><span class="badge work">公務正事</span></td>
+                    <td>就在隔壁崇法街，可直接步行前往。</td>
+                </tr>
+                <tr>
+                    <td class="highlight">基隆看守所 ➔ 八斗子漁港</td>
+                    <td>6.0 km / 11分鐘</td>
+                    <td><span class="badge leisure">休閒釣魚</span></td>
+                    <td>行駛市9鄉道接台2線北部濱海公路。</td>
+                </tr>
+                <tr>
+                    <td class="highlight">八斗子漁港 ➔ 五股紅蟳王</td>
+                    <td>44.9 km / 40~50分</td>
+                    <td><span class="badge leisure">休閒釣蝦</span></td>
+                    <td>行駛台62線快速道路接國道1號下五股交流道。</td>
+                </tr>
+                <tr>
+                    <td class="highlight">五股紅蟳王 ➔ 友愛金色商旅</td>
+                    <td>11.5 km / 20分鐘</td>
+                    <td><span class="badge leisure">住宿休息</span></td>
+                    <td>走台65線快速道路，直奔板橋重慶路。</td>
+                </tr>
+                <tr>
+                    <td class="highlight">友愛金色商旅 ➔ 新北地院</td>
+                    <td>5.5 km / 20分鐘</td>
+                    <td><span class="badge work">公務正事</span></td>
+                    <td>經平面四川路二段接金城路（上班平面車多）。</td>
+                </tr>
+                <tr>
+                    <td class="highlight">新北地院 ➔ 台北看守所</td>
+                    <td>1.4 km / 3分鐘</td>
+                    <td><span class="badge work">公務正事</span></td>
+                    <td>右轉青雲路、立德路直行即達。</td>
+                </tr>
+                <tr>
+                    <td class="highlight">台北看守所 ➔ 淡水小坪頂</td>
+                    <td>25.8 km / 39分鐘</td>
+                    <td><span class="badge leisure">休閒釣魚</span></td>
+                    <td>走台65線往北過關渡大橋，接坪頂路爬坡。</td>
+                </tr>
+                <tr>
+                    <td class="highlight">淡水小坪頂 ➔ 返回大甲</td>
+                    <td>167 km / 2小時</td>
+                    <td><span class="badge leisure">快樂歸途</span></td>
+                    <td>走國道3號南下返回大甲溫馨的家。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PDF 列印強制分頁點 -->
+    <div class="page-break"></div>
+
+    <h2>二、 每日精細時程表</h2>
+
+    <div style="background: var(--primary-light); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+        <h3 style="margin: 0; color: var(--primary); font-size: 16px;">📅 DAY 1 (7/16 星期四) - 基隆雙正事 ➔ 八斗子路亞 ➔ 五股紅蟳王</h3>
+        <ul style="margin: 10px 0 0 0; padding-left: 20px; font-size: 13px;">
+            <li><strong>06:00 - 08:20</strong> | 大甲出發走國道3號（提早出發，避開上班尖峰大塞車）。</li>
+            <li><strong>08:30 - 10:30</strong> | <span style="color:red; font-weight:bold;">[法院辦事]</span> 基隆地方法院（愛股-黃志鴻）。</li>
+            <li><strong>10:31 - 11:30</strong> | <span style="color:red; font-weight:bold;">[看守所借訊]</span> 隔壁看守所辦理提訊程序。</li>
+            <li><strong>11:45 - 12:45</strong> | 八斗子漁港周邊享用小卷米粉午餐。</li>
+            <li><strong>12:45 - 16:30</strong> | <strong>八斗子防波堤路亞</strong> 🎣（拋微鐵、根釣，<strong>16:30準時收竿防大塞車</strong>）。</li>
+            <li><strong>17:20 - 20:30</strong> | <strong>五股紅蟳王釣蝦</strong> 🦐（釣大公蝦、吹冷氣、熱炒晚餐解決）。</li>
+            <li><strong>20:30 - 20:50</strong> | 出發前往板橋友愛金色商旅（行經台65線）。</li>
+            <li><strong>20:50 ~</strong> | 辦理入住（板橋重慶路66號，先確認好停車位）。</li>
+        </ul>
+    </div>
+
+    <div style="background: var(--secondary-light); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+        <h3 style="margin: 0; color: var(--secondary); font-size: 16px;">📅 DAY 2 (7/17 星期五) - 新北雙正事 ➔ 淡水大嘴黑鱸 ➔ 快樂歸途</h3>
+        <ul style="margin: 10px 0 0 0; padding-left: 20px; font-size: 13px;">
+            <li><strong>08:00 - 08:20</strong> | 飯店退房出發前往土城（平面車潮多，預留20分鐘）。</li>
+            <li><strong>08:20 - 10:30</strong> | <span style="color:red; font-weight:bold;">[法院辦事]</span> 新北地方法院土城院區（諒股-丁冠豪）。</li>
+            <li><strong>10:33 - 11:30</strong> | <span style="color:red; font-weight:bold;">[看守所借訊]</span> 台北看守所（立德路）。</li>
+            <li><strong>11:30 - 12:10</strong> | 往淡水小坪頂移動（行經快速道路、關渡大橋）。</li>
+            <li><strong>12:10 - 13:00</strong> | 小坪頂山上特色小吃店便餐。</li>
+            <li><strong>13:00 - 17:00</strong> | <strong>BASSERLAND 俱樂部</strong> 🎣（挑戰美式管理池，享受大嘴黑鱸強力洗鰓）。</li>
+            <li><strong>17:00 ~</strong> | 收拾裝備，經國道3號南下安全返回台中大甲。</li>
+        </ul>
+    </div>
+
+    <h2>三、 釣魚人公路旅行・必備貼心提醒</h2>
+    <div class="tips-grid">
+        <div class="tip-card">
+            <h4>🧼 裝備污漬與異味管理</h4>
+            <ul>
+                <li><strong>除鹽防臭</strong>：海水路亞（八斗子）收竿後，務必用自備清水沖洗捲線器、導環及路亞餌，擦乾再收納。</li>
+                <li><strong>密封隔離</strong>：準備大塑膠袋/收納箱，將有海腥味、蝦味的髒衣服、雨鞋或工具密封，避免車內產生異味，維持隔日辦公專業形象。</li>
+            </ul>
+        </div>
+        <div class="tip-card">
+            <h4>🔒 貴重釣具防盜與安全</h4>
+            <ul>
+                <li><strong>裝備勿留車內</strong>：第一天晚上車子停在五股紅蟳王或板橋路邊時，高價竿、捲線器千萬不要放在車窗內顯眼處。</li>
+                <li><strong>攜帶上樓</strong>：晚上入住友愛金色商旅時，建議將高單價的捲線器、路亞竿隨身攜帶帶入客房。</li>
+            </ul>
+        </div>
+        <div class="tip-card">
+            <h4>🎣 BASSERLAND 規範與準備</h4>
+            <ul>
+                <li><strong>壓扁倒鉤</strong>：小坪頂黑鱸池嚴格限用單鉤、無倒鉤（或壓扁倒鉤）。</li>
+                <li><strong>愛護魚隻</strong>：場內嚴禁使用魚夾（Grip）。出發前建議預先用鉗子將硬餌與軟蟲鉤倒鉤壓平，並準備撈網。</li>
+            </ul>
+        </div>
+        <div class="tip-card">
+            <h4>🚗 停車與時間控管</h4>
+            <ul>
+                <li><strong>飯店停車</strong>：友愛金色商旅車位有限，入住前（約20:30）可先撥電話確認特約或現場車位。</li>
+                <li><strong>法院提早到</strong>：兩日早上地院辦公車位皆極難求，務必提早15分鐘到達現場排隊找車位並通過大門安檢。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
