@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌹 情人節補慶二日遊行程表</title>
+    <style>
+        :root {
+            --primary-color: #1a2a3a;
+            --accent-color: #d45d79;
+            --accent-hover: #c14361;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #2b2b2b;
+            --subtext-color: #666666;
+            --tag-bg: #fde8ed;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px 15px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0 10px 0;
+        }
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin: 0 0 8px 0;
+            letter-spacing: 1px;
+        }
+        .header p {
+            color: var(--accent-color);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        .day-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            padding: 22px 20px;
+            margin-bottom: 25px;
+        }
+        .day-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            border-bottom: 2px solid #f0f2f5;
+            padding-bottom: 12px;
+            margin-top: 0;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .day-title span {
+            color: var(--accent-color);
+        }
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 18px;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 7px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(212, 93, 121, 0.2);
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 22px;
+            width: 2px;
+            height: calc(100% - 2px);
+            background-color: #eef0f4;
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        .time {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+        .event-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin: 3px 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .event-desc {
+            font-size: 0.88rem;
+            color: var(--subtext-color);
+            margin-top: 2px;
+        }
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--accent-color);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+        .note-card {
+            background: linear-gradient(135deg, #fff6f8 0%, #fff 100%);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+        .note-card strong {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>🌹 情人節補慶二日遊</h1>
+        <p>賽車熱血 ✕ 岸邊海釣 ✕ 雙人泡湯舒壓 ✕ 旭集大餐</p>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="day-card">
+        <div class="day-title">
+            <span>Day 1（週六）</span> 賽車熱血 ✕ 雙人泡湯舒壓
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">09:30 – 10:15</div>
+                <div class="event-title">永安卡丁賽車場 <span class="tag">熱血開場</span></div>
+                <div class="event-desc">早上開場甩尾體驗，享受速度感與熱血節奏。</div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">10:15 – 13:00</div>
+                <div class="event-title">永安觀光魚市 <span class="tag">海鮮 ✕ 岸拋遠投</span></div>
+                <div class="event-desc">享用現炸海鮮與熱湯；周邊岸邊遠投沉底試竿（打花身雞魚、黑格），在岸邊吹海風放鬆。</div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">13:00 – 14:30</div>
+                <div class="event-title">輕鬆開車北上 <span class="tag">車程約75分</span></div>
+                <div class="event-desc">收竿上國道直奔北投，開啟特斯拉 AP 輔助駕駛聽音樂。</div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">15:00 – 16:40</div>
+                <div class="event-title">北投馥悅溫泉酒店 <span class="tag">15:00 Check-in</span></div>
+                <div class="event-desc">入住客房享受雙人白磺泉/碳酸氫鈉泉，洗去海風鹹感與全身肌肉疲勞。</div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">17:00 – 19:00</div>
+                <div class="event-title">雙人泰式舒壓按摩 <span class="tag">2小時極致放鬆</span></div>
+                <div class="event-desc">120 分鐘完整療程：含全身被動拉筋伸展與深層精油油壓，將疲勞徹底揉開。</div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">19:30 – 21:30</div>
+                <div class="event-title">日式居酒屋 <span class="tag">浪漫晚餐</span></div>
+                <div class="event-desc">前往預訂好的居酒屋享用串燒、生魚片與熱湯，享受溫馨二人世界。</div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-card">
+        <div class="day-title">
+            <span>Day 2（週日）</span> 睡到自然醒 ✕ 竹北旭集大餐
+        </div>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="time">09:30 – 11:00</div>
+                <div class="event-title">晨湯 ✕ 悠閒早餐 <span class="tag">11:00 退房</span></div>
+                <div class="event-desc">不設鬧鐘睡到自然醒，享用早餐，退房前再享受一次溫泉晨湯。</div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">11:00 – 12:30</div>
+                <div class="event-title">悠閒過渡空檔 <span class="tag">綠意散步 / 咖啡</span></div>
+                <div class="event-desc">可在北投圖書館/地熱谷漫步喝咖啡，或提早南下至竹北遠百周邊悠閒喝手沖逛逛。</div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">12:30 – 13:40</div>
+                <div class="event-title">開車南下竹北 <span class="tag">車程約65分</span></div>
+                <div class="event-desc">國道暢行無阻，抵達遠東百貨竹北店停好車。</div>
+            </li>
+            <li class="timeline-item">
+                <div class="time">14:30 – 16:30</div>
+                <div class="event-title">旭集 和食集錦 竹北遠百店 <span class="tag">14:30 下午餐</span></div>
+                <div class="event-desc">14:30 準時進場！享受頂級生魚片、鐵板干貝與炙燒握壽司，經過全身舒壓後狀態滿分！</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="note-card">
+        <strong>💡 行前預約提醒：</strong>
+        <br>1. 記得提早預約 Day 1 週六 17:00~19:00 的雙人 2 小時泰式按摩。
+        <br>2. 居酒屋記得預約 19:30 雙人座位。
+        <br>3. Day 1 海釣攜帶輕量化裝備（1 支遠投竿）即可，方便迅速收竿北上。
+    </div>
+</div>
+
+</body>
+</html>
